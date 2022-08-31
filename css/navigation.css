@@ -1,0 +1,202 @@
+
+
+/* ======= NAVIGATION ============================= */
+nav {
+    display: flex;
+    height: var(--nav-height);
+
+    position: fixed;
+
+    background: rgba(9, 9, 10, 0.6);
+    border-bottom: 1px solid rgba(114, 114, 126, 0.5);
+
+    top: 0;
+    /* vai jogar o conteudo para direita */
+    width: 100vw;
+    /* left: 50%; */
+    /* faz o conteudo centralizar */
+    /* transform: translateX(-50%); */
+    z-index: 100;
+}
+
+nav .logo {
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+nav .menu,
+nav .close-menu {
+    position: fixed;
+}
+
+/*----- logo -----------*/
+nav span {
+
+    color: var(--primary-color);
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+nav .wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -------------------- scroll -------------------- */
+nav.scroll {
+    background: var(--primary-color);
+    border-bottom: 1px solid white;
+}
+
+nav.scroll span path {
+    color: white;
+}
+
+nav.scroll .logo path {
+    fill: var(--secondary-color);
+}
+
+nav.scroll svg path {
+    stroke: var(--secondary-color);
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ======= MENU-EXPANDED ============================= */
+
+/* esconde as barra de rolagem*/
+body.menu-expanded {
+    overflow: hidden;
+}
+
+/* some tudo do primeiro nivel só aparece o nav */
+body.menu-expanded> :not(nav) {
+    visibility: hidden;
+}
+
+/* some o menu e o blotão de fechar o X */
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* faz o menu aparecer */
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu {
+    transform: translateY(100%);
+}
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+
+    width: 100vw;
+    height: 100vh;
+
+    /* ponha um espaço entre o menu e logo */
+    padding-top: var(--nav-height);
+
+    transition: transform 300ms;
+    transform: translateY(0);
+}
+
+/* .menu ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    margin-top: 6rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+} */
+
+.menu .button {
+    width: 90%;
+    background: var(--brand-color);
+    color: white;
+    /* max-width: 400px;
+    min-width: 250px px; */
+
+    margin: 0px auto;
+    padding: 5px 20px;
+    border: 2px solid var(--brand-color);
+    border-radius: 2px;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    transition: all 0.2s ease 0s;
+    margin-top: 30px;
+}
+
+.menu .button:hover {
+    background: white;
+    color: var(--brand-color);
+    filter: brightness(1.1);
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 1rem;
+    text-align: center;
+
+
+    border: 1px solid transparent;
+}
+
+.menu ul li a {
+    font-family: Roboto, sans-serif;
+    font-size: 2.441rem;
+    line-height: 3.75rem;
+    font-weight: 700;
+    color: var(--brand-color);
+}
+
+/* ponha a logo e o botão X por cima da camada */
+body.menu-expanded .logo,
+body.menu-expanded nav button {
+    position: relative;
+    z-index: 100;
+}
+
+/*----- logo -----------*/
+body.menu-expanded nav span {
+    color: black;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+body.menu-expanded button {
+    color: red;
+}
+
+body.menu-expanded span path,
+body.menu-expanded .logo path {
+    fill: white;
+}
+
+body.menu-expanded .close-menu path {
+    stroke: var(--brand-color);
+}

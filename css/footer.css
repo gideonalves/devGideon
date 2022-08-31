@@ -1,0 +1,46 @@
+
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background: var(--primary-color);
+
+}
+
+.footer-wrapper div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-wrapper span {
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* BACK TO TOP */
+#backToTopButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+#backToTopButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

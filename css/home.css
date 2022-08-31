@@ -1,0 +1,3 @@
+#home {
+    padding-top: calc(0.1rem + var(--nav-height));
+}

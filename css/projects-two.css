@@ -1,0 +1,92 @@
+
+/*========= PROJETOS ================*/
+#projects .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#projects .card {
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+}
+
+#projects .card h3 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+#projects .card span {
+    font-family: montserrat, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: rgb(118, 118, 118);
+}
+
+#projects .card p {
+    display: block;
+    padding-top: 20px;
+    flex: 1 1 0%;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: white;
+    border-top: 1px solid var(--primary-color);
+}
+
+#projects .project-liks {
+    display: flex;
+    gap: 20px;
+}
+
+
+#projects .project-liks a:first-child {
+    width: 100%;
+    padding: 8px 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+#projects .project-liks a:first-child:hover {
+    background: var(--primary-color);
+}
+
+
+#projects .project-liks a:last-child {
+    padding: 6px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.2s ease 0s;
+}
+
+
+#projects .project-liks a:last-child:hover {
+    color: #ffffff;
+    background: var(--primary-color);
+}
+
+#projects .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
