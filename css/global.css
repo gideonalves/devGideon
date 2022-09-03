@@ -120,7 +120,6 @@ p>span {
 }
 
 .btn a {
-
     display: inline;
     color: white;
     font-family: Montserrat, sans-serif;
@@ -128,5 +127,42 @@ p>span {
     line-height: 2.225rem;
 }
 
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+
+      /*=== GERAL =================================*/
+    body {
+        overflow: auto;
+    }
+
+    .wrapper {
+        width: min(112rem, 100%);
+        display: grid;
+    }
+   
+    /*=== NAVIGATION =================================*/
+    /* reset */
+    nav#navigation .wrapper * {
+        margin: 0;
+        padding: 0;
+        visibility: initial;
+        display: initial;
+        opacity: initial;
+        flex-direction: initial;
+        position: initial;
+        font-size: initial;
+        font-weight: initial;
+        transform: initial;
+        color: initial;
+        background-color: initial;
+        filter: initial;
+        border: none;
+    }
+
+
+    
+
+}
 
 
