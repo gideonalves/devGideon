@@ -1,3 +1,27 @@
+/*=== HOME =================================*/
 #home {
     padding-top: calc(0.1rem + var(--nav-height));
+}
+
+#home .wrapper .col-b {
+    display: none;      
+}
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+    #home .wrapper {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        'A B'
+        'C C';        ;
+    }
+
+    #home .wrapper .col-a {
+        grid-area: A;        
+    }
+
+    #home .wrapper .col-b {
+        display: block;
+        grid-area: B;     
+    }
 }

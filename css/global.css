@@ -137,8 +137,9 @@ p>span {
     }
 
     .wrapper {
-        width: min(112rem, 100%);
+        width: min(75rem, 100%);
         display: grid;
+        padding-inline: 0;
     }
    
     /*=== NAVIGATION =================================*/

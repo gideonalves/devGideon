@@ -268,10 +268,16 @@ body.menu-expanded .close-menu path {
     nav#navigation.scroll .menu li a:hover {
         opacity: 1;
     }
-
+    /* Button curriculo */
     nav#navigation .menu .button:hover {
         background-color: var(--primary-color);
         border: none;
         color: white;
+    }
+
+    nav#navigation.scroll .menu .button:hover {
+        background-color: var(--primary-color);
+        filter: brightness(1.3);
+        border: none;
     }
 }

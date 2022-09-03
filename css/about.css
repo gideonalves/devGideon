@@ -12,3 +12,30 @@
     transition: all 0.2s ease 0s;
     color: white !important;
 }
+
+#about .wrapper .col-b {
+    display: none;      
+}
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+    #about .wrapper .col-b {
+        display: block;      
+    }
+
+    #about .wrapper {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        'A B'
+        'C C';        
+    }
+    
+    #about.wrapper .col-a {
+        grid-area: B;        
+    }
+    
+    #about .wrapper .col-b {
+        grid-area: A;     
+    }    
+}
+
