@@ -1,6 +1,7 @@
 /*=== HOME =================================*/
 #home {
-    padding-top: calc(0.1rem + var(--nav-height));
+    padding-block: 0;
+    padding-top: calc(1rem + var(--nav-height));
 }
 
 #home .wrapper .col-b {

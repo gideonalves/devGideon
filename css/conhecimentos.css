@@ -106,3 +106,16 @@
     border-top-right-radius: 20px;
     z-index: 1;
 }
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+    #conhecimento .container-knowledge {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cont>div+div {
+        border-top: none;
+        border-left: 2px solid var(--primary-color);
+    }
+}

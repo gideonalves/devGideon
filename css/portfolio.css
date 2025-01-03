@@ -1,0 +1,87 @@
+
+/*========= PROJETOS ================*/
+#portfolio .container-portfolio {
+    margin-bottom: 30px;
+}
+
+#portfolio .conteudo {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* margin-bottom: 30px; */
+    background: var(--brand-color);
+    border: 2px solid var(--primary-color);
+}
+
+#portfolio .conteudo>div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#portfolio .conteudo>div svg {
+    max-width: 60px;
+}
+
+#portfolio .conteudo path {
+    fill: var(--primary-color);
+}
+
+#portfolio .conteudo span {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: white;
+    text-align: justify;
+}
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+  
+   #portfolio .container-portfolio {
+        height: 100vh;
+        max-height: 300px;
+        position: relative;
+
+        width: 100%;
+        margin: 4rem 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #portfolio .col-a {
+        padding: 40px;
+        flex-direction: row;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        max-width: 640px;
+        /* padding: 20px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* gap: 20px; */
+    }
+
+    #portfolio .col-b {
+        padding: 40px;
+        flex-direction: row;
+        position: absolute;
+        right: 0px !important;
+        bottom: 0px !important;
+        max-width: 640px;
+        /* padding: 20px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* gap: 20px; */
+    }
+
+    #portfolio .conteudo span {
+        font-size: 1.125rem;
+        line-height: 2.25rem;
+        color: white;
+        text-align: justify;
+    }
+}
+

@@ -1,19 +1,61 @@
+window.addEventListener('scroll', onScroll)
 
-const Navigation = document.getElementById("navigation")
-
+onScroll()
 function onScroll() {
     showNavOnScroll()
-    showBackToTopButtonScroll()
+    showBackToTopButtonOnScroll()
+
+    activateMenuAtCurrentSection(home)   
+    activateMenuAtCurrentSection(portfolio)   
+    activateMenuAtCurrentSection(about)   
 }
 
-function showNavOnScroll() {
-    if (scrollY > 0) {
-        Navigation.classList.add('scroll')
-    } else {
-        Navigation.classList.remove('scroll')
+function activateMenuAtCurrentSection(section) {
+    const targetLine = scrollY + innerHeight / 2
+
+    // verificar se a seção passou da linha
+    // quais dados vou precisar?
+
+    // o topo da seção
+    const sectionTop = section.offsetTop
+    // a altura da seção
+    const sectionHeight = section.offsetHeight
+
+    // o topo da seção chegou ou ultrapassou a linha alto
+    const sectionTopReachOrPassedTargetline = targetLine >= sectionTop
+
+    // verificar se a base está abaixo da linha alvo
+    // quais dados vou precisar?
+
+    // a seção termina aonde?
+    const sectionEndsAt = sectionTop + sectionHeight
+    // o final da seção passou da linha alvo
+    const sectionEndPassedTargetline = sectionEndsAt <= targetLine
+
+    // limites da seção
+    const sectionBoundaries = sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
+
+    const sectionId = section.getAttribute('id')
+    const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+    menuElement.classList.remove('active')
+    if (sectionBoundaries) {
+        menuElement.classList.add('active')
     }
 }
-function showBackToTopButtonScroll() {
+
+
+function showNavOnScroll() {
+    const navigation = document.querySelector('#navigation')
+    if (scrollY > 0) {
+        navigation.classList.add('scroll')
+    } else {
+        navigation.classList.remove('scroll')
+    }
+}
+
+function showBackToTopButtonOnScroll() {
+    // const navigation = document.querySelector('#navigation')
     if (scrollY > 550) {
         backToTopButton.classList.add('show')
     } else {
@@ -21,6 +63,7 @@ function showBackToTopButtonScroll() {
     }
 }
 
+// Abri o menu
 function openMenu() {
     document.body.classList.add('menu-expanded')
 }
@@ -28,6 +71,7 @@ function openMenu() {
 function closeMenu() {
     document.body.classList.remove('menu-expanded')
 }
+
 
 ScrollReveal({
     origin: 'top',
@@ -40,5 +84,3 @@ ScrollReveal({
   #about,
   #about .header-title
 `)
-
-// 57: 00 da terceira video aula

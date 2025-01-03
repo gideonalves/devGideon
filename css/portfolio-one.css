@@ -1,0 +1,128 @@
+
+/*========= PROJETOS ================*/
+#portfolio-one .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#portfolio-one .card {
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+}
+
+#portfolio-one .card h3 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+#portfolio-one .card span {
+    font-family: montserrat, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: rgb(118, 118, 118);
+}
+
+#portfolio-one .card p {
+    display: block;
+    padding-top: 20px;
+    flex: 1 1 0%;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: white;
+    border-top: 1px solid var(--primary-color);
+}
+
+#portfolio-one .project-liks {
+    display: flex;
+    gap: 20px;
+}
+
+
+#portfolio-one .project-liks a:first-child {
+    width: 100%;
+    padding: 8px 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+#portfolio-one .project-liks a:first-child:hover {
+    background: var(--primary-color);
+}
+
+
+#portfolio-one .project-liks a:last-child {
+    padding: 6px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.2s ease 0s;
+}
+
+
+#portfolio-one .project-liks a:last-child:hover {
+    color: #ffffff;
+    background: var(--primary-color);
+}
+
+#portfolio-one .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+    #portfolio-one .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    #portfolio-one .card {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        gap: 24px;
+        border: 1px solid rgb(118, 118, 118);
+        border-radius: 4px;
+    }
+
+    #portfolio-one .card h3 {
+        font-family: montserrat, sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #portfolio-one .card img {
+        width: 300px;
+    }
+
+    #portfolio-one .card span {
+        font-family: montserrat, sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        color: rgb(118, 118, 118);
+    }
+}

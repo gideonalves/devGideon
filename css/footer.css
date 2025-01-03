@@ -1,12 +1,9 @@
-
-
 .footer-wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 20px;
     background: var(--primary-color);
-
 }
 
 .footer-wrapper div a {
@@ -45,5 +42,17 @@
     transform: translateY(0);
 }
 
+
+/*=== RESPONSIVO =================================*/
+@media (min-width: 1024px) {
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;    
+    }
+}
 
 
